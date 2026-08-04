@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <title>Gestor de Productos</title>
+</head>
+<body>
+    <h1>Gestor de Productos</h1>
+    <h2>Agregar productos:</h2>
+    <div id="container-agg">
+        <div id="formulario-div">
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre">
+                <label for="precio">Precio:</label>
+                <input type="text" name="precio" id="precio">
+                <label for="codigoqr">Código QR:</label>
+                <input type="text" name="qrcode" id="codigoqr">
+                <button type="button" id="aggBtn">Agregar</button>
+            </form>
+        </div>
+        <div id="qr-div">
+            <div id="reader" style="width:250px"></div>
+            <button type="button" id="scanQRBtn">ScanQR</button>
+        </div>
+    </div>
+    <main>
+        <table id = "table">
+            <h3>Productos</h2>
+            <tr>
+                <th>Producto:</th>
+                <th>Precio:</th>
+                <th>Código QR:</th>
+                <th>Acción:</th>
+            </tr>
+        </table>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
