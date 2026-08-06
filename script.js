@@ -143,7 +143,49 @@ aggBtn.addEventListener("click", () => {
     
 })
 
-//Scan QR code
+scanBtn.addEventListener('click', () => {
+  const qrCodeScanner = new Html5Qrcode("reader")
+  
+  qrCodeScanner.start(
+    { facingMode: "environment" }, 
+    {
+      fps: 10,
+      qrbox: 250
+    },
+    (decodedText, decodedResult) => {
+      console.log("QR code detected:", decodedText)
+      qrCodeScanner.stop().then(() => {
+        rellenarFormulario(decodedText) 
+        console.log(decodedResult, decodedText)
+      }).catch(err => {
+        console.error("Error al detener el escáner", err)
+        return
+      })
+    },
+    (errorMessage) => {
+      setTimeout(() => {
+        console.warn("Error de escaneo:", errorMessage)
+        return
+      }, 2000)
+    }
+  ).catch(err => {
+    alert("No se pudo iniciar el escáner")
+    console.error("No se pudo iniciar el escáner", err)
+  })
+})
 
+function rellenarFormulario(datosQR) {
+  let datosProducto
+  try {
+    datosProducto = JSON.parse(datosQR)
+  } catch (error) {
+    alert("El QR no contiene datos en formato válido")
+    return
+  }
+
+  inpName.value = datosProducto.nombre
+  inpQrCode.value = datosProducto.codigo
+}
+ 
 
 window.onload = cargarDatos
