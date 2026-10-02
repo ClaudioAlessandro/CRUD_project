@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<link rel="stylesheet" href="style.css">
+	<title>Auth — CRUD Project</title>
+</head>
+<body>
+	<main class="auth">
+		<h1>Cuenta</h1>
+
+		<div id="status" class="status"></div>
+
+		<section class="forms">
+			<div class="card">
+				<h2>Register</h2>
+				<input id="reg-username" placeholder="Username" />
+				<input id="reg-password" type="password" placeholder="Password" />
+				<button id="reg-btn">Register</button>
+			</div>
+
+			<div class="card">
+				<h2>Login</h2>
+				<input id="login-username" placeholder="Username" />
+				<input id="login-password" type="password" placeholder="Password" />
+				<button id="login-btn">Login</button>
+			</div>
+		</section>
+
+		<div class="actions">
+			<button id="logout-btn" class="hidden">Logout</button>
+			<a id="go-app" href="../body/index.html">Go to App</a>
+		</div>
+	</main>
+
+	<script src="./script.js"></script>
+</body>
+</html>

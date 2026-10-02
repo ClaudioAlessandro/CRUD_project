@@ -1,0 +1,32 @@
+{
+  "name": "crud_project",
+  "version": "1.0.0",
+  "description": "small project",
+  "keywords": [
+    "crud",
+    "back"
+  ],
+  "homepage": "https://github.com/ClaudioAlessandro/CRUD_project#readme",
+  "bugs": {
+    "url": "https://github.com/ClaudioAlessandro/CRUD_project/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClaudioAlessandro/CRUD_project.git"
+  },
+  "license": "ISC",
+  "author": "Claudio",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.4",
+    "express": "^5.2.1",
+    "nodemon": "^3.1.14",
+    "sequelize": "^6.37.8"
+  }
+}
